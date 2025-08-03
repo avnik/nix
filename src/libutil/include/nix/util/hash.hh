@@ -35,7 +35,9 @@ constexpr inline size_t regularHashSize(HashAlgorithm type)
 
 extern const StringSet hashAlgorithms;
 
-extern const std::string nix32Chars;
+extern const std::array<unsigned char, 256> reverseNix32Map;
+
+constexpr const unsigned char reverseNix32Sentinel = 0xFF;
 
 /**
  * @brief Enumeration representing the hash formats.
